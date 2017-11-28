@@ -27,7 +27,7 @@ public class Book{
 	ISBN = num;
     }
     public String toString (){
-	return title + ", " + author + ", " + ISBN;
+	return getTitle() + ", " + getAuthor() + ", " + getISBN();
     }
 }
     
