@@ -28,7 +28,6 @@ public class Sorts{
 	    }
     }
     public static void insertionSort(int[] data){
-	      int i;
 	      int key;
 	      int j;
 	      for (i = 1; i < data.length; i++){
