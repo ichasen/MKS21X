@@ -1,16 +1,12 @@
-public class SuperArray implements Iterable<String>{
+import java.util.ArrayList;
+public class SuperArray{
     private String[]data;
     private int size;
-    public String iterator(){
-	for (int i = 0;i<data.length;i++){
-	    return data[i];
-	}
-    }
-    public SuperArray(int size){
+    public SuperArray(){
 	data = new String [size];
     }
     public void clear(){
-	String [] data = new String []{};
+	data = new String[0];
 	size = 0;
     }
     public int size(){
@@ -83,7 +79,7 @@ public class SuperArray implements Iterable<String>{
 	    data = data2;
 	}
     }
-    public String[] remove(int index){
+    public String remove(int index){
 	String ans = "";
 	if (index < 0 || index > size()){
 	    System.out.println("Error - Out of range");
@@ -102,4 +98,5 @@ public class SuperArray implements Iterable<String>{
 	remove (indexOf (element));
 	return true;
     }
+    
 }
