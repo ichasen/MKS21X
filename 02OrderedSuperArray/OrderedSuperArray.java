@@ -5,12 +5,13 @@ public class OrderedSuperArray extends SuperArray{
 	super ();
     }
     public OrderedSuperArray(int size){
-	super(size);
+	super();
     }
     public String set (int index,String element){
         if (index < 0 || index > size()){
 	    throw new UnsupportedOperationException();
 	}
+	return element;
     }
     
     
@@ -20,7 +21,7 @@ public class OrderedSuperArray extends SuperArray{
     }
     public int indexOf (String value){
 	for (int i = 0;i<data.length;i++){
-	    if (data[i].equals(element)){
+	    if (data[i].equals(value)){
 		return i;
 	    }
 	}
@@ -28,7 +29,7 @@ public class OrderedSuperArray extends SuperArray{
     }
     public int lastIndexOf (String value){
 	for (int i = data.length - 1;i>=0;i--){
-	    if (data[i].equals(element)){
+	    if (data[i].equals(value)){
 		return i;
 	    }
 	}
@@ -66,7 +67,7 @@ public class OrderedSuperArray extends SuperArray{
     public boolean add(String value){
       //add to the correct spot.
       //you may still use super.add(index,value)
-	return super.add(rightSpot(value),value);
+	super.add(rightSpot(value),value);
 	return true;
     }
 
