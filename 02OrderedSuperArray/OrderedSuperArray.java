@@ -7,6 +7,9 @@ public class OrderedSuperArray extends SuperArray{
     public OrderedSuperArray(int size){
 	super();
     }
+    public OrderedSuperArray(String[] ary){
+	ary = data;
+    }
     public String set (int index,String element){
         if (index < 0 || index > size()){
 	    throw new UnsupportedOperationException();
