@@ -1,6 +1,8 @@
-public abstract class LibraryBook extends Book implements Comparable<LibraryBook>{
+import java.util.ArrayList;
+import java.util.Collections;
+public abstract class LibraryBook extends Book implements Comparable<String>{
     private String callNumber;
-    public LibraryBook(String a, String t, int n, String cn){
+    public LibraryBook(String a, String t, String n, String cn){
 	super(a,t,n);
 	callNumber = cn;
     }
