@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+import java.util.Collections;
 public class ReferenceBook extends LibraryBook{
     private String collection;
-    public ReferenceBook(String a, String t, String cn, int n, String collection){
+    public ReferenceBook(String a, String t, String cn, String n, String collection){
 	super(a,t,n,cn);
 	this.collection = collection;
     }
@@ -22,9 +24,6 @@ public class ReferenceBook extends LibraryBook{
 	return ans;
     }
     public String toString(){
-	return getTitle() + ", " + getAuthor() + ", " + getISBN() + ", " + getCallNumber() + ", " + circulationStatus() + ", " + checkout() + ", " + returned();
+	return getTitle() + ", " + getAuthor() + ", " + getISBN() + ", " + getCallNumber() + ", " + circulationStatus() + ", ";
     }
 }
-    
-	
-	
