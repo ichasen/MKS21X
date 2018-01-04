@@ -1,7 +1,10 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.ArrayList;
 public class CirculatingBook extends LibraryBook{
     private String currentHolder;
     private String dueDate;
-    public CirculatingBook(String a, String t, int n, String cn){
+    public CirculatingBook(String a, String t, String n, String cn){
 	super (a,t,n,cn);
 	currentHolder = null;
 	dueDate = null;
@@ -29,7 +32,7 @@ public class CirculatingBook extends LibraryBook{
 	dueDate = null;
     }
     public String circulationStatus(){
-	ans = "";
+	String ans = "";
 	if (currentHolder.equals(null)){
 	    ans = "book available on the shelves";
 	}
@@ -42,7 +45,3 @@ public class CirculatingBook extends LibraryBook{
 	return getTitle() + ", " + getAuthor() + ", " + getISBN() + ", " + getCallNumber() + ", " + circulationStatus() + ", " + getCurrentHolder() + ", " + getDueDate();
     }
 }
-	    
-	
-	
-	
