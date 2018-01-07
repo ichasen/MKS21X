@@ -1,9 +1,10 @@
 import java.util.*;
+import java.util.Iterator;
 public class SuperArray implements Iterable<String>{
     private String[]data;
     private int size;
     public Iterator<String> iterator(){
-        return new SuperArrayIterator (current);
+        return new SuperArrayIterator (0,data.length);
     }
     public SuperArray(int size){
 	String[] data = new String [size];
@@ -82,7 +83,7 @@ public class SuperArray implements Iterable<String>{
 	    data = data2;
 	}
     }
-    public String[] remove(int index){
+    public String remove(int index){
 	String ans = "";
 	if (index < 0 || index > size()){
 	    System.out.println("Error - Out of range");
