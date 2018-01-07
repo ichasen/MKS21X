@@ -1,16 +1,19 @@
-private class SuperArrayIterator implements Iterator<String>{
+import java.util.Iterator;
+public class SuperArrayIterator implements Iterator<String>{
     int current;
-    public RangeOfIntsIterator(int i){
+    int end;
+    public SuperArrayIterator(int i, int j){
 	current = i;
+	end = j;
     }
-    public int next(){
+    public String next(){
 	if (hasNext()){
 	    current++;
 	}
 	else{
 	    System.exit(0);
 	}
-	return current - 1;
+	return Integer.toString(current - 1);
     }
     public boolean hasNext(){
         return current <= end;
